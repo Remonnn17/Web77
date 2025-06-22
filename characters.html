@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karakter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background: linear-gradient(145deg, #1e1e1e, #3a3a3a);
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #222;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffb300;
+    }
+
+    .char-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .char-info {
+      background-color: #333;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .char-info p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+
+    .char-skin {
+      text-align: center;
+    }
+
+    .char-skin img {
+      width: 160px;
+      height: 290px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border: 3px solid #ffb300;
+    }
+
+    select {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+    }
+
+    @media (min-width: 768px) {
+      .char-layout {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+
+      .char-skin {
+        flex: 1;
+      }
+
+      .char-info {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Informasi Karakter</h1>
+    <div class="char-layout">
+      <div class="char-info">
+        <p><strong>Nama:</strong> Reza Anderson</p>
+        <p><strong>Level:</strong> 5</p>
+        <p><strong>Uang:</strong> $2,150</p>
+        <p><strong>Pekerjaan:</strong> Mechanic</p>
+        <p><strong>Play Time:</strong> 35 Jam</p>
+        <p><strong>Status:</strong> Aktif</p>
+      </div>
+      <div class="char-skin">
+        <img id="skinImage" src="https://gta-sa-skins.github.io/skins/0.png" alt="Skin Preview">
+        <br />
+        <label for="skinSelect">Pilih Skin:</label><br />
+        <select id="skinSelect" onchange="updateSkin()">
+          <option value="0">Skin ID 0</option>
+          <option value="1">Skin ID 1</option>
+          <option value="2">Skin ID 2</option>
+          <option value="3">Skin ID 3</option>
+          <option value="4">Skin ID 4</option>
+          <option value="5">Skin ID 5</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateSkin() {
+      const skinId = document.getElementById("skinSelect").value;
+      document.getElementById("skinImage").src = `https://gta-sa-skins.github.io/skins/${skinId}.png`;
+    }
+  </script>
+</body>
+</html>
