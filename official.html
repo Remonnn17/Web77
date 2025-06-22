@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Official Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .official-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+        .official-table th, .official-table td {
+            padding: 12px;
+            border: 1px solid #444;
+            color: #fff;
+        }
+        .official-table th {
+            background-color: #1abc9c;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="karakter.html">👤 Karakter</a>
+    <a href="forum.html">💬 Forum Info</a>
+    <a href="official.html">📢 Official</a>
+    <a href="log.html">🧾 Log Login</a>
+</div>
+
+<div class="main-content"><div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+<div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+
+
+
+    <div class="overlay"></div>
+    
+
+<div class="main-content">
+<div class="main-content">
+
+    <div class="main fade">
+        <h1>📢 Panel Official</h1>
+        <table class="official-table">
+            <thead>
+                <tr>
+                    <th>Waktu</th>
+                    <th>Pesan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>22/06/2025 18:10</td>
+                    <td>Server maintenance jam 9 malam.</td>
+                </tr>
+                <tr>
+                    <td>21/06/2025 12:30</td>
+                    <td>Event balap dimulai Sabtu malam!</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i>*Data ini masih statis. Untuk versi dinamis bisa ditambahkan backend PHP + MySQL.</i></p>
+    </div>
+
+
+
+</div></div></div>
+<script>
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('sidebar-visible');
+}
+</script>
+
+</body>
+</html>
